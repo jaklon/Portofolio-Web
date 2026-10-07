@@ -1,0 +1,48 @@
+{
+  "capturedOn": "2026-10-06",
+  "authorization": "User requested logos and homepage screenshots of these four websites for their portfolio; other project media will be supplied later.",
+  "capture": "Actual rendered homepage screenshots from the Codex in-app browser at a 1440 × 960 CSS viewport, exported as JPEG. Exported image dimensions differ from the CSS viewport; the published media metadata records the actual pixel dimensions.",
+  "processing": "Homepage captures converted to WebP. Square covers combine the actual screenshot and source logo in a local composition. Logo colours and proportions are retained; empty padding is trimmed in the composition.",
+  "projects": [
+    {
+      "slug": "circular-waste-company-profile",
+      "website": "https://circularwaste.id/",
+      "logoSource": "https://circularwaste.id/assets/cwm_logo-BKPT0rEI.png",
+      "logo": "/projects/circular-waste/logo.png",
+      "screenshot": "/projects/circular-waste/home.webp",
+      "cover": "/projects/circular-waste/cover.webp",
+      "width": 1274,
+      "height": 717
+    },
+    {
+      "slug": "lippi-mining-company-profile",
+      "website": "https://lippimining.co/",
+      "logoSource": "https://lippimining.co/assets/lippi-logo-new-9r-zoXBv.webp",
+      "logo": "/projects/lippi-mining/logo.webp",
+      "screenshot": "/projects/lippi-mining/home.webp",
+      "cover": "/projects/lippi-mining/cover.webp",
+      "width": 1270,
+      "height": 714
+    },
+    {
+      "slug": "carbon-treat-one-page-site",
+      "website": "https://carbontreat.id/",
+      "logoSource": "https://carbontreat.id/assets/logo-cti.png",
+      "logo": "/projects/carbon-treat/logo.png",
+      "screenshot": "/projects/carbon-treat/home.webp",
+      "cover": "/projects/carbon-treat/cover.webp",
+      "width": 1265,
+      "height": 712
+    },
+    {
+      "slug": "alpha-power-company-profile",
+      "website": "https://www.alphamachinery.net/",
+      "logoSource": "https://static.wixstatic.com/media/8ffc76_5623ba2af9c94e91acb58ee876723706~mv2.png/v1/fill/w_436,h_158,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/8ffc76_5623ba2af9c94e91acb58ee876723706~mv2.png",
+      "logo": "/projects/alpha-power/logo.avif",
+      "screenshot": "/projects/alpha-power/home.webp",
+      "cover": "/projects/alpha-power/cover.webp",
+      "width": 1253,
+      "height": 705
+    }
+  ]
+}

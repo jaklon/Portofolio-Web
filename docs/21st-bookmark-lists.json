@@ -1,0 +1,25 @@
+{
+  "endpoint": "https://21st.dev/api/mcp",
+  "server": {
+    "name": "21st",
+    "version": "0.1.1"
+  },
+  "tool": "list_bookmark_lists",
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "1 bookmark list(s):\n- For My Page (11 items)  [id: 377114aa-c538-45e9-b365-0e524e8e368b]"
+      }
+    ],
+    "structuredContent": {
+      "lists": [
+        {
+          "id": "377114aa-c538-45e9-b365-0e524e8e368b",
+          "name": "For My Page",
+          "itemCount": 11
+        }
+      ]
+    }
+  }
+}

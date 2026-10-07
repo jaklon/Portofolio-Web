@@ -1,0 +1,152 @@
+{
+  "endpoint": "https://21st.dev/api/mcp",
+  "server": {
+    "name": "21st",
+    "version": "0.1.1"
+  },
+  "tool": "get_bookmark_list",
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "11 result(s) across 21st.dev (metadata only).\n\n### [component] Coverflow Carousel  [id: 23997]\nby ruixen.ui\nA rack of square covers with the perspective reversed. The centre card sits square to the viewer while the ones beside it swing their outer edges forward, so the rack opens toward you instead of folding away. Drag it and the caption underneath follows.\npreview: https://cdn.21st.dev/ruixen.ui/coverflow-carousel/default/preview.1785769945835-40fdf02e-f950-484c-aa20-a6b0993a08a7.png\ninstall: npx shadcn@latest add \"https://21st.dev/r/ruixen.ui/coverflow-carousel?api_key=$API_KEY_21ST\"\n→ get the code: get_component({ id: 23997 })\n\n### [component] Hero Carousel  [id: 24752]\nby crafterui\nA full-bleed editorial hero driven by a filmstrip: cards share one top edge, the focused card unfurls to full height while its neighbours stay clipped to half, and the whole background re-grades to the focused photo. Wheel, drag, click and arrow keys.\npreview: https://cdn.21st.dev/crafterui.com/hero-carousel/default/preview.1787059372325-b649cf5c-7b55-4ad3-b0d4-a13e810f53c2.png\ninstall: npx shadcn@latest add \"https://21st.dev/r/crafterui/hero-carousel?api_key=$API_KEY_21ST\"\n→ get the code: get_component({ id: 24752 })\n\n### [component] Offer Carousel  [id: 8442]\nby ravikatiyar162\nOffer Carousel\nThis component provides a sleek, horizontally scrollable display for showcasing offers or featured items. It includes custom navigation arrows and smooth-scrolling functionality, with cards that animate on hover for an engaging user experience.\npreview: https://cdn.21st.dev/ravikatiyar162/offer-carousel/default/preview.1759491183362.png\ninstall: npx shadcn@latest add \"https://21st.dev/r/ravikatiyar162/offer-carousel?api_key=$API_KEY_21ST\"\n→ get the code: get_component({ id: 8442 })\n\n### [component] Image Stream Hero  [id: 24377]\nby ruixen.ui\nTwo rails of images ride out of the vanishing point at the centre and sweep to both edges, growing and turning as they approach. Perspective does the sweep and the growth at once, and the loop never stops.\npreview: https://cdn.21st.dev/ruixen.ui/image-stream-hero/default/preview.1786457825693-aec7ef9e-26de-4f80-96a2-74ee9afaa09a.png\ninstall: npx shadcn@latest add \"https://21st.dev/r/ruixen.ui/image-stream-hero?api_key=$API_KEY_21ST\"\n→ get the code: get_component({ id: 24377 })\n\n### [component] Text Rewind  [id: 5]\nby kokonutd\npreview: https://cdn.21st.dev/user_2rQ1QHrJyxpmWMHhqhANzWMc64n/text-rewind/5/preview.png\ninstall: npx shadcn@latest add \"https://21st.dev/r/kokonutd/text-rewind?api_key=$API_KEY_21ST\"\n→ get the code: get_component({ id: 5 })\n\n### [component] Canvas  [id: 6]\nby designali-in\nCanvas effect\npreview: https://cdn.21st.dev/user_2rO0IUQINTfBex4xN8Ghho5dpr4/canvas/default/preview.1787667692242.png\ninstall: npx shadcn@latest add \"https://21st.dev/r/designali-in/canvas?api_key=$API_KEY_21ST\"\n→ get the code: get_component({ id: 6 })\n\n### [component] Animated hero  [id: 1313]\nby tommyjepsen\nAnimated hero with text and two shadcn/ui buttons\npreview: https://cdn.21st.dev/user_2nElBLvklOKlAURm6W1PTu6yYFh/animated-hero/default/preview.png\ninstall: npx shadcn@latest add \"https://21st.dev/r/tommyjepsen/animated-hero?api_key=$API_KEY_21ST\"\n→ get the code: get_component({ id: 1313 })\n\n### [component] Liquid Glass Button  [id: 3166]\nby designali-in\nLiquid Glass Button\npreview: https://cdn.21st.dev/designali-in/liquid-glass-button/default/preview.1750605472950.png\ninstall: npx shadcn@latest add \"https://21st.dev/r/designali-in/liquid-glass-button?api_key=$API_KEY_21ST\"\n→ get the code: get_component({ id: 3166 })\n\n### [component] Radial Orbital Timeline  [id: 1820]\nby jatin-yadav05\nA dynamic orbital visualization component that displays nodes in a circular pattern around a central point. Each node represents a data point with title, status, and energy level.\npreview: https://cdn.21st.dev/user_2ra80vx0iKMyQWJ5AESmNfFbCHD/radial-orbital-timeline/default/preview.1745917317806.png\ninstall: npx shadcn@latest add \"https://21st.dev/r/jatin-yadav05/radial-orbital-timeline?api_key=$API_KEY_21ST\"\n→ get the code: get_component({ id: 1820 })\n\n### [component] Spotlight Card  [id: 2487]\nby jahed\npreview: https://cdn.21st.dev/user_2xJxXqdwWohYrdd6fiMYrS9hbmO/spotlight-card/default/preview.1785940290519.png\ninstall: npx shadcn@latest add \"https://21st.dev/r/jahed/spotlight-card?api_key=$API_KEY_21ST\"\n→ get the code: get_component({ id: 2487 })\n\n### [component] Spline Scene  [id: 1166]\nby serafimcloud\nA React component that integrates Spline 3D scenes.\n\nDemo component combines interactive 3D visualization with a spotlight effect and responsive text content.\n\nFeatures:\n\t•\tLazy-loaded Spline integration\n\t•\tResponsive layout with flex columns\n\t•\tGradient text effects\n\t•\tSpotlight background effect\n\t•\tDark theme optimized\n\n\npreview: https://cdn.21st.dev/user_2nElBLvklOKlAURm6W1PTu6yYFh/splite/default/preview.1788457500398.webp\ninstall: npx shadcn@latest add \"https://21st.dev/r/serafimcloud/splite?api_key=$API_KEY_21ST\"\n→ get the code: get_component({ id: 1166 })\n\nMetadata is free. get_component (the code) is the PAID step - on the free tier it uses your daily retrieval quota (see get_usage)."
+      }
+    ],
+    "structuredContent": {
+      "results": [
+        {
+          "type": "component",
+          "id": 23997,
+          "name": "Coverflow Carousel",
+          "description": "A rack of square covers with the perspective reversed. The centre card sits square to the viewer while the ones beside it swing their outer edges forward, so the rack opens toward you instead of folding away. Drag it and the caption underneath follows.",
+          "previewUrl": "https://cdn.21st.dev/ruixen.ui/coverflow-carousel/default/preview.1785769945835-40fdf02e-f950-484c-aa20-a6b0993a08a7.png",
+          "videoUrl": "https://cdn.21st.dev/ruixen.ui/coverflow-carousel/default/video.1785769945835-40fdf02e-f950-484c-aa20-a6b0993a08a7.mp4",
+          "author": "ruixen.ui",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2y5Wd5l713ZIFYjX19aZXSyXd6b/avatar.svg+xml",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/ruixen.ui/coverflow-carousel?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@ruixen.ui/components/coverflow-carousel"
+        },
+        {
+          "type": "component",
+          "id": 24752,
+          "name": "Hero Carousel",
+          "description": "A full-bleed editorial hero driven by a filmstrip: cards share one top edge, the focused card unfurls to full height while its neighbours stay clipped to half, and the whole background re-grades to the focused photo. Wheel, drag, click and arrow keys.",
+          "previewUrl": "https://cdn.21st.dev/crafterui.com/hero-carousel/default/preview.1787059372325-b649cf5c-7b55-4ad3-b0d4-a13e810f53c2.png",
+          "videoUrl": "https://cdn.21st.dev/crafterui.com/hero-carousel/default/video.1787059372325-b649cf5c-7b55-4ad3-b0d4-a13e810f53c2.mp4",
+          "author": "crafterui",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_3I2x1i5rQdtCtEXNhK426qVviuq/avatar.png",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/crafterui/hero-carousel?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@crafterui/components/hero-carousel"
+        },
+        {
+          "type": "component",
+          "id": 8442,
+          "name": "Offer Carousel",
+          "description": "Offer Carousel\nThis component provides a sleek, horizontally scrollable display for showcasing offers or featured items. It includes custom navigation arrows and smooth-scrolling functionality, with cards that animate on hover for an engaging user experience.",
+          "previewUrl": "https://cdn.21st.dev/ravikatiyar162/offer-carousel/default/preview.1759491183362.png",
+          "videoUrl": "https://cdn.21st.dev/ravikatiyar162/offer-carousel/default/video.1759491183362.mp4",
+          "author": "ravikatiyar162",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2zMtrqo9RMaaIn4f8F2z3oeY497/avatar.png",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/ravikatiyar162/offer-carousel?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@ravikatiyar162/components/offer-carousel"
+        },
+        {
+          "type": "component",
+          "id": 24377,
+          "name": "Image Stream Hero",
+          "description": "Two rails of images ride out of the vanishing point at the centre and sweep to both edges, growing and turning as they approach. Perspective does the sweep and the growth at once, and the loop never stops.",
+          "previewUrl": "https://cdn.21st.dev/ruixen.ui/image-stream-hero/default/preview.1786457825693-aec7ef9e-26de-4f80-96a2-74ee9afaa09a.png",
+          "videoUrl": "https://cdn.21st.dev/ruixen.ui/image-stream-hero/default/video.1786457825693-aec7ef9e-26de-4f80-96a2-74ee9afaa09a.mp4",
+          "author": "ruixen.ui",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2y5Wd5l713ZIFYjX19aZXSyXd6b/avatar.svg+xml",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/ruixen.ui/image-stream-hero?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@ruixen.ui/components/image-stream-hero"
+        },
+        {
+          "type": "component",
+          "id": 5,
+          "name": "Text Rewind",
+          "description": "",
+          "previewUrl": "https://cdn.21st.dev/user_2rQ1QHrJyxpmWMHhqhANzWMc64n/text-rewind/5/preview.png",
+          "videoUrl": "https://cdn.21st.dev/user_2rQ1QHrJyxpmWMHhqhANzWMc64n/text-rewind/5/video.mp4",
+          "author": "kokonutd",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2rQ1QHrJyxpmWMHhqhANzWMc64n/avatar.png",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/kokonutd/text-rewind?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@kokonutd/components/text-rewind"
+        },
+        {
+          "type": "component",
+          "id": 6,
+          "name": "Canvas",
+          "description": "Canvas effect",
+          "previewUrl": "https://cdn.21st.dev/user_2rO0IUQINTfBex4xN8Ghho5dpr4/canvas/default/preview.1787667692242.png",
+          "videoUrl": "https://cdn.21st.dev/user_2rO0IUQINTfBex4xN8Ghho5dpr4/canvas/default/video.1787667730003.mp4",
+          "author": "designali-in",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2rO0IUQINTfBex4xN8Ghho5dpr4/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/designali-in/canvas?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@designali-in/components/canvas"
+        },
+        {
+          "type": "component",
+          "id": 1313,
+          "name": "Animated hero",
+          "description": "Animated hero with text and two shadcn/ui buttons",
+          "previewUrl": "https://cdn.21st.dev/user_2nElBLvklOKlAURm6W1PTu6yYFh/animated-hero/default/preview.png",
+          "videoUrl": "https://cdn.21st.dev/user_2nElBLvklOKlAURm6W1PTu6yYFh/animated-hero/default/video.mp4",
+          "author": "tommyjepsen",
+          "authorImage": "https://avatars.githubusercontent.com/u/5646646?v=4",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/tommyjepsen/animated-hero?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@tommyjepsen/components/animated-hero"
+        },
+        {
+          "type": "component",
+          "id": 3166,
+          "name": "Liquid Glass Button",
+          "description": "Liquid Glass Button",
+          "previewUrl": "https://cdn.21st.dev/designali-in/liquid-glass-button/default/preview.1750605472950.png",
+          "videoUrl": "https://cdn.21st.dev/designali-in/liquid-glass-button/default/video.1750605472950.mp4",
+          "author": "designali-in",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2rO0IUQINTfBex4xN8Ghho5dpr4/avatar.jpeg",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/designali-in/liquid-glass-button?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@designali-in/components/liquid-glass-button"
+        },
+        {
+          "type": "component",
+          "id": 1820,
+          "name": "Radial Orbital Timeline",
+          "description": "A dynamic orbital visualization component that displays nodes in a circular pattern around a central point. Each node represents a data point with title, status, and energy level.",
+          "previewUrl": "https://cdn.21st.dev/user_2ra80vx0iKMyQWJ5AESmNfFbCHD/radial-orbital-timeline/default/preview.1745917317806.png",
+          "videoUrl": "https://cdn.21st.dev/user_2ra80vx0iKMyQWJ5AESmNfFbCHD/radial-orbital-timeline/default/video.1745921764745.mp4",
+          "author": "jatin-yadav05",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18ycmE4MHZyMW5wMVhERXR4SlBpNFJXQmJCMDkifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/jatin-yadav05/radial-orbital-timeline?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@jatin-yadav05/components/radial-orbital-timeline"
+        },
+        {
+          "type": "component",
+          "id": 2487,
+          "name": "Spotlight Card",
+          "description": "",
+          "previewUrl": "https://cdn.21st.dev/user_2xJxXqdwWohYrdd6fiMYrS9hbmO/spotlight-card/default/preview.1785940290519.png",
+          "videoUrl": "https://cdn.21st.dev/user_2xJxXqdwWohYrdd6fiMYrS9hbmO/spotlight-card/default/video.1785940304718.mp4",
+          "author": "jahed",
+          "authorImage": "https://vucvdpamtrjkzmubwlts.supabase.co/storage/v1/object/public/users/user_2xJxXqdwWohYrdd6fiMYrS9hbmO/avatar.png",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/jahed/spotlight-card?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@jahed/components/spotlight-card"
+        },
+        {
+          "type": "component",
+          "id": 1166,
+          "name": "Spline Scene",
+          "description": "A React component that integrates Spline 3D scenes.\n\nDemo component combines interactive 3D visualization with a spotlight effect and responsive text content.\n\nFeatures:\n\t•\tLazy-loaded Spline integration\n\t•\tResponsive layout with flex columns\n\t•\tGradient text effects\n\t•\tSpotlight background effect\n\t•\tDark theme optimized\n\n",
+          "previewUrl": "https://cdn.21st.dev/user_2nElBLvklOKlAURm6W1PTu6yYFh/splite/default/preview.1788457500398.webp",
+          "videoUrl": "https://cdn.21st.dev/user_2nElBLvklOKlAURm6W1PTu6yYFh/splite/default/video.1788457505028.mp4",
+          "author": "serafimcloud",
+          "authorImage": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ2l0aHViL2ltZ18ybkVsQk9lMnU2VHVQTmZWaDNZWTZ0UG05OXQifQ",
+          "installCommand": "npx shadcn@latest add \"https://21st.dev/r/serafimcloud/splite?api_key=$API_KEY_21ST\"",
+          "url": "https://21st.dev/@serafimcloud/components/splite"
+        }
+      ]
+    }
+  }
+}

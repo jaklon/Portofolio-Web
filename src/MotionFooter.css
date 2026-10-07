@@ -1,0 +1,67 @@
+/* CinematicFooter from the supplied prompt, adapted to the portfolio's local theme. */
+.cinematic-footer-reveal { position: relative; height: 100svh; margin-top: 70px; clip-path: inset(0); isolation: isolate; scroll-margin-top: 0; }
+.cinematic-footer { --footer-accent: var(--blue); --footer-secondary: #aa94cb; position: fixed; inset: auto 0 0; display: flex; flex-direction: column; width: 100%; height: 100svh; min-height: 720px; overflow: hidden; background: var(--bg); color: var(--text); border-top: 1px solid var(--line); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+.site-shell--home .cinematic-footer { --footer-accent: #bacbff; --footer-secondary: #9e82c4; }
+.cinematic-footer :focus-visible { outline: 2px solid var(--footer-accent); outline-offset: 5px; }
+.footer-bg-grid { position: absolute; inset: 0; pointer-events: none; background-size: 60px 60px; background-image: linear-gradient(to right, color-mix(in srgb, var(--text) 4%, transparent) 1px, transparent 1px), linear-gradient(to bottom, color-mix(in srgb, var(--text) 4%, transparent) 1px, transparent 1px); mask-image: linear-gradient(transparent, #000 25%, #000 75%, transparent); }
+.footer-aurora { position: absolute; width: 90vw; height: 65vh; top: 48%; left: 50%; pointer-events: none; border-radius: 50%; background: radial-gradient(ellipse at 30% 45%, color-mix(in srgb, var(--blue) 23%, transparent), transparent 55%), radial-gradient(ellipse at 70% 55%, color-mix(in srgb, var(--footer-secondary) 20%, transparent), transparent 55%); filter: blur(65px); animation: footer-breathe 8s ease-in-out infinite alternate; animation-play-state: paused; }
+@keyframes footer-breathe { from { transform: translate(-50%, -50%) scale(.95); opacity: .65; } to { transform: translate(-50%, -50%) scale(1.1); opacity: 1; } }
+.footer-giant-bg-text { position: absolute; bottom: -5vh; left: 50%; transform: translateX(-50%); font-size: 26vw; font-weight: 900; line-height: .8; letter-spacing: -.055em; white-space: nowrap; pointer-events: none; user-select: none; color: transparent; -webkit-text-stroke: 1px color-mix(in srgb, var(--text) 7%, transparent); background: linear-gradient(color-mix(in srgb, var(--text) 10%, transparent), transparent 75%); background-clip: text; }
+.cinematic-footer__marquee { position: absolute; top: clamp(100px, 12vh, 130px); left: -5%; width: 110%; overflow: hidden; transform: rotate(-2deg); padding-block: 18px; border-block: 1px solid color-mix(in srgb, var(--text) 12%, transparent); background: color-mix(in srgb, var(--bg) 65%, transparent); backdrop-filter: blur(12px); box-shadow: 0 15px 45px #0000000a; }
+.cinematic-footer__marquee-track { display: flex; width: max-content; animation: footer-scroll-marquee 40s linear infinite; animation-play-state: paused; font-size: 11px; line-height: 1; font-weight: 650; letter-spacing: .16em; text-transform: uppercase; color: color-mix(in srgb, var(--text) 65%, transparent); }
+.cinematic-footer__marquee-group { display: flex; align-items: center; gap: 40px; padding-inline: 20px; }
+.cinematic-footer__marquee-group > span { display: inline-flex; align-items: center; gap: 40px; white-space: nowrap; }
+.cinematic-footer__marquee-group i { color: var(--footer-accent); font-size: 16px; font-style: normal; }
+@keyframes footer-scroll-marquee { to { transform: translateX(-50%); } }
+.cinematic-footer-reveal.is-visible .footer-aurora, .cinematic-footer-reveal.is-visible .cinematic-footer__marquee-track { animation-play-state: running; }
+.cinematic-footer__marquee:hover .cinematic-footer__marquee-track { animation-play-state: paused; }
+.cinematic-footer__main { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; width: min(100%, 1040px); margin-inline: auto; padding: 200px 30px 55px; text-align: center; }
+.cinematic-footer__eyebrow { margin: 0 0 22px; font-family: var(--font-mono); font-size: 9px; line-height: 1.6; letter-spacing: .12em; color: var(--footer-accent); }
+.cinematic-footer h2 { margin: 0; font-size: clamp(54px, 7.4vw, 108px); font-weight: 800; letter-spacing: -.065em; line-height: 1.02; }
+.footer-text-glow { color: var(--text); background: linear-gradient(175deg, var(--text) 20%, color-mix(in srgb, var(--text) 68%, transparent)); background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 20px color-mix(in srgb, var(--text) 10%, transparent)); }
+.cinematic-footer__intro { margin: 22px 0 30px; font-size: 13px; line-height: 1.85; color: var(--muted); }
+.cinematic-footer__links { width: 100%; display: flex; flex-direction: column; align-items: center; }
+.cinematic-footer__primary { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+.footer-glass-pill { display: inline-flex; align-items: center; justify-content: center; gap: 13px; min-height: 48px; padding: 12px 22px; border: 1px solid color-mix(in srgb, var(--text) 16%, transparent); border-radius: 999px; background: linear-gradient(145deg, color-mix(in srgb, var(--text) 7%, transparent), color-mix(in srgb, var(--text) 2%, transparent)); color: var(--text); box-shadow: 0 10px 30px -10px color-mix(in srgb, var(--bg) 50%, transparent), inset 0 1px 1px color-mix(in srgb, var(--text) 12%, transparent); backdrop-filter: blur(16px); transition: background 300ms, border-color 300ms, box-shadow 300ms; }
+.footer-glass-pill:hover { border-color: color-mix(in srgb, var(--text) 35%, transparent); background: linear-gradient(145deg, color-mix(in srgb, var(--text) 13%, transparent), color-mix(in srgb, var(--text) 5%, transparent)); box-shadow: 0 16px 40px -12px #00000020, inset 0 1px 1px color-mix(in srgb, var(--text) 20%, transparent); }
+.cinematic-footer__cta { min-height: 60px; padding: 17px 28px; font-size: 13px; font-weight: 650; }
+.cinematic-footer__cta--email { border-color: color-mix(in srgb, var(--footer-accent) 50%, transparent); background: linear-gradient(145deg, color-mix(in srgb, var(--blue) 20%, transparent), color-mix(in srgb, var(--blue) 6%, transparent)); }
+.cinematic-footer__cta--email:hover { border-color: var(--footer-accent); background: color-mix(in srgb, var(--blue) 22%, transparent); }
+.cinematic-footer__email-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px; margin-top: 23px; }
+.cinematic-footer__email-row > a { display: inline-flex; align-items: center; min-height: 44px; font-family: var(--font-mono); font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+.cinematic-footer__email-row > a:hover { color: var(--text); }
+.cinematic-footer__copy { min-height: 44px; width: 44px; padding: 0; }
+.cinematic-footer__copy-status { min-height: 18px; margin: 8px 0 0; font-size: 10px; line-height: 1.8; color: var(--muted); }
+.cinematic-footer__bottom { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 25px; width: 100%; padding: 0 48px 32px; }
+.cinematic-footer__copyright { font-family: var(--font-mono); font-size: 9px; line-height: 1.6; letter-spacing: .04em; color: var(--muted); }
+.cinematic-footer__credit { min-height: 44px; padding: 11px 20px; gap: 8px; font-size: 9px; font-weight: 600; color: var(--muted); }
+.cinematic-footer__credit svg { color: var(--footer-accent); fill: color-mix(in srgb, var(--footer-accent) 12%, transparent); }
+.cinematic-footer__top { flex: 0 0 48px; width: 48px; padding: 0; }
+.cinematic-footer__top svg { transition: transform 200ms; }
+.cinematic-footer__top:hover svg { transform: translateY(-3px); }
+@media (max-width: 800px) { .cinematic-footer__bottom { padding-inline: 28px; gap: 18px; } .cinematic-footer h2 { font-size: clamp(54px, 9vw, 76px); } }
+@media (max-width: 640px) {
+  .cinematic-footer-reveal { margin-top: 50px; }
+  .cinematic-footer__marquee { padding-block: 16px; }
+  .cinematic-footer__marquee-track { font-size: 9px; }
+  .cinematic-footer__main { padding: 172px 22px 35px; }
+  .cinematic-footer__eyebrow { font-size: 8px; letter-spacing: .08em; margin-bottom: 18px; }
+  .cinematic-footer h2 { font-size: clamp(43px, 12vw, 62px); }
+  .cinematic-footer__intro { margin: 18px 0 25px; font-size: 12px; }
+  .cinematic-footer__primary { flex-direction: column; width: min(100%, 290px); gap: 12px; }
+  .cinematic-footer__cta { min-height: 54px; padding: 14px 20px; font-size: 12px; }
+  .cinematic-footer__email-row { margin-top: 18px; gap: 5px; }
+  .cinematic-footer__email-row > a { font-size: 10px; }
+  .cinematic-footer__bottom { display: grid; grid-template-columns: 1fr auto; padding: 0 22px 23px; gap: 14px; }
+  .cinematic-footer__copyright { font-size: 8px; }
+  .cinematic-footer__credit { grid-column: 1 / -1; grid-row: 2; justify-self: center; font-size: 8px; min-height: 36px; padding-block: 8px; }
+  .cinematic-footer__top { grid-column: 2; grid-row: 1; width: 44px; min-height: 44px; }
+  .footer-giant-bg-text { bottom: 8px; font-size: 28vw; }
+}
+/* Short windows need normal document flow so every contact action stays reachable. */
+@media (max-height: 720px), (prefers-reduced-motion: reduce) {
+  .cinematic-footer-reveal { height: auto; clip-path: none; }
+  .cinematic-footer { position: relative; height: auto; min-height: 720px; }
+}
+@media (prefers-reduced-motion: reduce) { .footer-aurora { animation: none; transform: translate(-50%, -50%); } .cinematic-footer__marquee-track { animation: none; } .footer-glass-pill, .cinematic-footer__top svg { transition: none; } }
+@supports not (clip-path: inset(0)) { .cinematic-footer-reveal { height: auto; } .cinematic-footer { position: relative; height: auto; min-height: 720px; } }

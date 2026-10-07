@@ -1,0 +1,11 @@
+/* Frame the supplied GLB as a portrait above the existing card footer. */
+.hero-scene--avatar .hero-scene__art { inset: 46px 0 120px; }
+.hero-scene__avatar { position: absolute; inset: 0; opacity: 0; transition: opacity 650ms; pointer-events: none; mask-image: linear-gradient(#000 83%, transparent 100%); }
+.hero-scene--avatar.is-loaded .hero-scene__avatar { opacity: 1; }
+.hero-scene__avatar canvas { width: 100%; height: 100%; display: block; }
+.hero-scene__avatar-halo { position: absolute; width: 88%; aspect-ratio: 1; top: 45%; left: 50%; transform: translate(-50%, -50%); border-radius: 50%; background: radial-gradient(circle, #9784c124, transparent 68%); border: 1px solid #b5a4d411; box-shadow: 0 0 0 28px #b5a4d407; pointer-events: none; }
+.hero-scene__avatar-placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 18px; color: #cfc7e1; }
+.hero-scene__avatar-placeholder > span { font-family: var(--font-mono); font-size: 10px; }
+.hero-scene__avatar-placeholder > button { display: flex; gap: 9px; align-items: center; min-height: 44px; border: 1px solid #b8aec450; border-radius: 999px; padding: 8px 16px; background: #ffffff0b; font-size: 11px; }
+.hero-scene__footer button:disabled { opacity: .35; cursor: wait; }
+@media (max-width: 640px) { .hero-scene--avatar .hero-scene__art { inset-block: 38px 105px; } }

@@ -1,0 +1,25 @@
+{
+  "endpoint": "https://21st.dev/api/mcp",
+  "server": {
+    "name": "21st",
+    "version": "0.1.1"
+  },
+  "tool": "get_usage",
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Tier: free\nFree component-code retrievals: 2/2 remaining today.\nUpgrade for unlimited: https://21st.dev/pricing\n21st AI generation: not enabled. Do not call generate or iterate_generation. Use search and get_component, then adapt the code with your own coding agent."
+      }
+    ],
+    "structuredContent": {
+      "tier": "free",
+      "aiGenerationEnabled": false,
+      "freeSearchesPerDay": null,
+      "freeSearchesRemaining": null,
+      "freeRetrievalsPerDay": 2,
+      "freeRetrievalsRemaining": 2,
+      "upgradeUrl": "https://21st.dev/pricing"
+    }
+  }
+}

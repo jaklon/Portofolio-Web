@@ -1,0 +1,246 @@
+{
+  "generatedOn": "2026-10-06",
+  "library": "https://github.com/simple-icons/simple-icons",
+  "usageEvidence": "Existing portfolio project/skill data; security tools explicitly named by the user on 6 October 2026.",
+  "icons": [
+    {
+      "id": "react",
+      "library": "Simple Icons",
+      "title": "React",
+      "slug": "react",
+      "source": "https://github.com/facebook/create-react-app/blob/282c03f9525fdf8061ffa1ec50dce89296d916bd/test/fixtures/relative-paths/src/logo.svg",
+      "license": "CC0 collection; brand rights remain with their owners"
+    },
+    {
+      "id": "typescript",
+      "library": "Simple Icons",
+      "title": "TypeScript",
+      "slug": "typescript",
+      "source": "https://www.typescriptlang.org/branding",
+      "license": "CC0 collection; brand rights remain with their owners"
+    },
+    {
+      "id": "javascript",
+      "library": "Simple Icons",
+      "title": "JavaScript",
+      "slug": "javascript",
+      "source": "https://github.com/voodootikigod/logo.js/blob/1544bdeed6d618a6cfe4f0650d04ab8d9cfa76d9/js.svg",
+      "license": {
+        "type": "MIT",
+        "url": "https://spdx.org/licenses/MIT"
+      }
+    },
+    {
+      "id": "html5",
+      "library": "Simple Icons",
+      "title": "HTML5",
+      "slug": "html5",
+      "source": "https://www.w3.org/html/logo/",
+      "license": "CC0 collection; brand rights remain with their owners"
+    },
+    {
+      "id": "css",
+      "library": "Simple Icons",
+      "title": "CSS",
+      "slug": "css",
+      "source": "https://github.com/CSS-Next/logo.css/blob/bacc20878227204b283c68a6b935f8279e06b0cd/css.svg",
+      "license": "CC0 collection; brand rights remain with their owners"
+    },
+    {
+      "id": "tailwindcss",
+      "library": "Simple Icons",
+      "title": "Tailwind CSS",
+      "slug": "tailwindcss",
+      "source": "https://tailwindcss.com/brand",
+      "license": "CC0 collection; brand rights remain with their owners"
+    },
+    {
+      "id": "vite",
+      "library": "Simple Icons",
+      "title": "Vite",
+      "slug": "vite",
+      "source": "https://github.com/voidzero-dev/community-design-resources/blob/55902097229cf01cf2a4ceb376f992f5cf306756/brand-assets/vite/vite-icon-color-bracketless.svg",
+      "license": "CC0 collection; brand rights remain with their owners"
+    },
+    {
+      "id": "gsap",
+      "library": "Simple Icons",
+      "title": "GSAP",
+      "slug": "gsap",
+      "source": "https://gsap.com/brand/",
+      "license": "CC0 collection; brand rights remain with their owners"
+    },
+    {
+      "id": "wix",
+      "library": "Simple Icons",
+      "title": "Wix",
+      "slug": "wix",
+      "source": "https://www.wix.com/about/design-assets",
+      "license": "CC0 collection; brand rights remain with their owners"
+    },
+    {
+      "id": "python",
+      "library": "Simple Icons",
+      "title": "Python",
+      "slug": "python",
+      "source": "https://www.python.org/community/logos/",
+      "license": "CC0 collection; brand rights remain with their owners"
+    },
+    {
+      "id": "php",
+      "library": "Simple Icons",
+      "title": "PHP",
+      "slug": "php",
+      "source": "https://php.net/download-logos.php",
+      "license": {
+        "type": "CC-BY-SA-4.0",
+        "url": "https://spdx.org/licenses/CC-BY-SA-4.0"
+      }
+    },
+    {
+      "id": "qwen",
+      "library": "Simple Icons",
+      "title": "QWen",
+      "slug": "qwen",
+      "source": "https://qwen.ai",
+      "license": "CC0 collection; brand rights remain with their owners"
+    },
+    {
+      "id": "vllm",
+      "library": "Simple Icons",
+      "title": "vLLM",
+      "slug": "vllm",
+      "source": "https://github.com/vllm-project/media-kit/blob/79b2ea5db25b723f2d81dae203a87c5b9a076722/vLLM-Logo.svg",
+      "license": "CC0 collection; brand rights remain with their owners"
+    },
+    {
+      "id": "githubactions",
+      "library": "Simple Icons",
+      "title": "GitHub Actions",
+      "slug": "githubactions",
+      "source": "https://github.com/features/actions",
+      "license": "CC0 collection; brand rights remain with their owners"
+    },
+    {
+      "id": "apache",
+      "library": "Simple Icons",
+      "title": "Apache",
+      "slug": "apache",
+      "source": "https://www.apache.org/foundation/press/kit",
+      "license": {
+        "type": "Apache-2.0",
+        "url": "https://spdx.org/licenses/Apache-2.0"
+      }
+    },
+    {
+      "id": "cpanel",
+      "library": "Simple Icons",
+      "title": "cPanel",
+      "slug": "cpanel",
+      "source": "https://cpanel.net/company/cpanel-brand-guide/",
+      "license": "CC0 collection; brand rights remain with their owners"
+    },
+    {
+      "id": "composer",
+      "library": "Simple Icons",
+      "title": "Composer",
+      "slug": "composer",
+      "source": "https://getcomposer.org",
+      "license": "CC0 collection; brand rights remain with their owners"
+    },
+    {
+      "id": "npm",
+      "library": "Simple Icons",
+      "title": "npm",
+      "slug": "npm",
+      "source": "https://www.npmjs.com",
+      "license": "CC0 collection; brand rights remain with their owners"
+    },
+    {
+      "id": "kotlin",
+      "library": "Simple Icons",
+      "title": "Kotlin",
+      "slug": "kotlin",
+      "source": "https://www.jetbrains.com/company/brand/logos/",
+      "license": "CC0 collection; brand rights remain with their owners"
+    },
+    {
+      "id": "trendmicro",
+      "library": "Simple Icons",
+      "title": "Trend Micro",
+      "slug": "trendmicro",
+      "source": "https://www.trendmicro.com",
+      "license": "CC0 collection; brand rights remain with their owners"
+    },
+    {
+      "id": "gophish",
+      "source": "https://getgophish.com/img/logo.min.svg",
+      "note": "White source mark on a navy backing for contrast.",
+      "license": "Original source and brand rights apply; no license inferred from public availability."
+    },
+    {
+      "id": "tenable",
+      "source": "https://www.tenable.com/",
+      "note": "Existing SVG mark exported from the official footer; navy backing for contrast.",
+      "license": "Original source and brand rights apply; no license inferred from public availability."
+    },
+    {
+      "id": "cyberark",
+      "source": "https://cyberark.github.io/conjur/img/cybr_logo_horiz.svg",
+      "note": "Symbol portion of the official horizontal logo.",
+      "license": "Original source and brand rights apply; no license inferred from public availability."
+    },
+    {
+      "id": "chroma",
+      "source": "https://www.trychroma.com/_next/static/immutable/media/chroma-wordmark.3omc55d6a9e1l.svg",
+      "note": "Symbol portion of the official horizontal logo.",
+      "license": "Original source and brand rights apply; no license inferred from public availability."
+    },
+    {
+      "id": "motion",
+      "source": "https://motion.dev/",
+      "note": "Header SVG mark; currentColor resolved to dark ink.",
+      "license": "Original source and brand rights apply; no license inferred from public availability."
+    },
+    {
+      "id": "emailjs",
+      "source": "https://www.emailjs.com/",
+      "note": "Header SVG mark; currentColor resolved to orange.",
+      "license": "Original source and brand rights apply; no license inferred from public availability."
+    },
+    {
+      "id": "java",
+      "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
+      "note": "Devicon asset; Java trademark belongs to its owner.",
+      "license": "Original source and brand rights apply; no license inferred from public availability."
+    },
+    {
+      "id": "smtp",
+      "source": "Local text badge; not represented as an official brand logo"
+    },
+    {
+      "id": "ftp",
+      "source": "Local text badge; not represented as an official brand logo"
+    },
+    {
+      "id": "bm25",
+      "source": "Local text badge; not represented as an official brand logo"
+    },
+    {
+      "id": "rag",
+      "source": "Local text badge; not represented as an official brand logo"
+    },
+    {
+      "id": "sentence-transformers",
+      "source": "Local text badge; not represented as an official brand logo"
+    },
+    {
+      "id": "phpmailer",
+      "source": "Local text badge; not represented as an official brand logo"
+    },
+    {
+      "id": "laps",
+      "source": "Local text badge; not represented as an official brand logo"
+    }
+  ]
+}
