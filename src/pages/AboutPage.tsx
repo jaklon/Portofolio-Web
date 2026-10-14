@@ -1,24 +1,46 @@
-import { ArrowUpRight, BookOpen, GraduationCap, ShieldCheck, Sparkles } from 'lucide-react'
+import { ArrowUpRight, BadgeCheck, GraduationCap, ShieldCheck } from 'lucide-react'
 import { Link } from 'react-router'
-import { achievements, education, experiences, skillGroups } from '../data/portfolio'
+import { achievements, education, experiences, projects } from '../data/portfolio'
+import { toolkit } from '../data/toolkit'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { PageTransition } from '../components/PageTransition'
-import { SectionHeading } from '../components/SectionHeading'
-import { Journey } from '../components/Journey'
-import { SpotlightCard } from '../components/ui/spotlight-card'
+import { HeroScene } from '../components/HeroScene'
 
 export function AboutPage() {
   usePageTitle('About')
+  const current = experiences[0]
+  const study = education[0]
+  const certification = achievements[0]
+
   return (
     <PageTransition>
-      <main id="main-content" className="page-shell page-width about-page">
-        <header className="page-hero page-hero--about"><p className="eyebrow">THE PERSON BEHIND THE PROJECTS</p><h1>A curious mind.<br />A <em>builder at heart.</em></h1><div className="page-hero__foot"><p>I'm Jascon Johanest Kembuan. I study Informatics Engineering, build websites for clients, explore applied AI, and learn from the real constraints of security work.</p><Link className="button button--primary" to="/projects">Explore my work <ArrowUpRight size={18} aria-hidden="true" /></Link></div></header>
-        <section className="about-bento" aria-label="Profile overview"><SpotlightCard className="bento-card bento-card--statement"><Sparkles size={30} strokeWidth={1.5} aria-hidden="true" /><p>I enjoy the whole journey:<br /><span>the idea, the interface,<br />the system, the delivery.</span></p><span className="eyebrow">CURIOUS ABOUT HOW THINGS CONNECT</span></SpotlightCard><article className="bento-card bento-card--now"><ShieldCheck size={28} strokeWidth={1.5} aria-hidden="true" /><span className="eyebrow">CURRENT CHAPTER</span><h2>CISO Intern</h2><p>PT Mandiri Sekuritas</p><small>Jul 2026 — Present</small></article><article className="bento-card bento-card--education"><GraduationCap size={28} strokeWidth={1.5} aria-hidden="true" /><span className="eyebrow">BUILDING THE FOUNDATION</span><h2>Informatics<br />Engineering</h2><p>Politeknik Negeri Jakarta</p><small>Semester 7</small></article></section>
-        <section className="section-space" aria-labelledby="journey-title"><SectionHeading id="journey-title" index="01" eyebrow="The journey" title="Every chapter adds a perspective." copy="From a project-based foundation to client work and security. Pick a milestone to explore." /><Journey /></section>
-        <section className="timeline-section section-space" aria-labelledby="experience-title"><SectionHeading id="experience-title" index="02" eyebrow="Experience" title="Learning through real work." /><div className="timeline-list">{experiences.map((experience, index) => <article className="timeline-item" key={`${experience.company}-${experience.period}`}><span className="timeline-item__index">{String(index + 1).padStart(2, '0')}</span><div className="timeline-item__main"><p>{experience.company}</p><h3>{experience.role}</h3><small>{experience.summary}</small></div><div className="timeline-item__meta"><span>{experience.period}</span><span>{experience.mode}</span></div></article>)}</div></section>
-        <section className="education-section section-space" aria-labelledby="education-title"><SectionHeading id="education-title" index="03" eyebrow="Education" title="A project-based foundation." /><div className="education-grid">{education.map(item => <article className="education-card" key={item.institution}><div><BookOpen size={23} strokeWidth={1.5} aria-hidden="true" /><span>{item.period}</span></div><h3>{item.institution}</h3><p>{item.program}</p><small>{item.summary}</small></article>)}</div></section>
-        <section className="skills-section section-space" aria-labelledby="skills-title"><SectionHeading id="skills-title" index="04" eyebrow="The toolkit" title="The tools behind the ideas." copy="Technologies I have worked with, grouped by the problems they help solve." /><div className="skill-groups">{skillGroups.map(group => <article className="skill-group" key={group.label}><h3>{group.label}</h3><div className="tag-list tag-list--large">{group.skills.map(skill => <span key={skill}>{skill}</span>)}</div></article>)}</div></section>
-        <section className="achievements-section section-space" aria-labelledby="achievement-title"><SectionHeading id="achievement-title" index="05" eyebrow="Along the way" title="Milestones worth keeping." /><div className="achievement-list">{achievements.map((achievement, index) => <article key={achievement.title}><span>{String(index + 1).padStart(2, '0')}</span><h3>{achievement.title}</h3><p>{achievement.issuer}</p><time>{achievement.date}</time></article>)}</div></section>
+      <main id="main-content" className="page-shell page-width about-page studio-page">
+        <section className="about-profile" aria-labelledby="about-title">
+          <div className="about-profile__copy">
+            <p className="eyebrow"><span className="status-dot" /> THE PERSON BEHIND THE CODE</p>
+            <h1 id="about-title">A curious mind.<br /><span>A builder at heart.</span></h1>
+            <p className="about-profile__intro">I'm Jascon Johanest Kembuan. I build for the web, explore applied AI, and learn how to make digital experiences more secure.</p>
+            <p className="about-profile__story">From a first sketch to a working website, I enjoy connecting the details: the interface, the system, and the delivery. My perspective comes from Informatics Engineering, client projects, and hands-on experience in security operations.</p>
+            <div className="about-profile__actions">
+              <Link className="button button--glass" to="/projects">Explore my work <ArrowUpRight size={18} aria-hidden="true" /></Link>
+              <a className="about-profile__contact" href="#contact">Let's connect <ArrowUpRight size={17} aria-hidden="true" /></a>
+            </div>
+          </div>
+
+          <div className="about-profile__portrait"><HeroScene context="about" /></div>
+
+          <dl className="about-profile__facts">
+            <div><dt><ShieldCheck size={20} aria-hidden="true" /> CURRENT CHAPTER</dt><dd><strong>{current.role}</strong><span>{current.company}</span><small>{current.period}</small></dd></div>
+            <div><dt><GraduationCap size={20} aria-hidden="true" /> THE FOUNDATION</dt><dd><strong>{study.institution}</strong><span>{study.program}</span><small>{study.period}</small></dd></div>
+            <div><dt><BadgeCheck size={20} aria-hidden="true" /> A RECENT MILESTONE</dt><dd><strong>{certification.title}</strong><span>{certification.issuer}</span><small>{certification.date}</small></dd></div>
+          </dl>
+
+          <dl className="about-profile__numbers">
+            <div><dt>Client websites</dt><dd>{String(projects.filter(project => project.category === 'freelance').length).padStart(2, '0')}</dd></div>
+            <div><dt>Projects & case studies</dt><dd>{String(projects.length).padStart(2, '0')}</dd></div>
+            <div><dt>Tools & technologies</dt><dd>{toolkit.length}</dd></div>
+          </dl>
+        </section>
       </main>
     </PageTransition>
   )

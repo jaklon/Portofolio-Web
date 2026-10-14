@@ -1,0 +1,54 @@
+.glow-card {
+  --glow-x: 50%;
+  --glow-y: 50%;
+  --glow-opacity: 0;
+  --hue: calc(var(--base) + var(--xp, 0) * var(--spread));
+  --border-size: 3px;
+  --spotlight-size: 200px;
+  position: relative;
+  isolation: isolate;
+  border: var(--border-size) solid hsl(var(--base) 65% 75% / .2);
+  border-radius: 20px;
+  background-color: var(--glow-backdrop, hsl(0 0% 60% / .12));
+  background-image: radial-gradient(var(--spotlight-size) circle at var(--glow-x) var(--glow-y), hsl(var(--hue) 100% 70% / calc(var(--glow-opacity) * .12)), transparent);
+  background-origin: border-box;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 1rem 2rem -1rem #0005;
+  touch-action: auto;
+}
+
+.glow-card--sm { width: 192px; min-height: 256px; padding: 16px; }
+.glow-card--md { width: 256px; min-height: 320px; padding: 16px; }
+.glow-card--lg { width: 320px; min-height: 384px; padding: 16px; }
+.glow-card__content { position: relative; z-index: 1; height: 100%; }
+
+.glow-card::before,
+.glow-card::after,
+.glow-card__halo::before {
+  content: '';
+  position: absolute;
+  inset: calc(-1 * var(--border-size));
+  border: var(--border-size) solid transparent;
+  border-radius: inherit;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  opacity: var(--glow-opacity);
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0) border-box;
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0) border-box;
+  mask-composite: exclude;
+}
+
+.glow-card::before,
+.glow-card__halo::before {
+  background-image: radial-gradient(calc(var(--spotlight-size) * .75) circle at var(--glow-x) var(--glow-y), hsl(var(--hue) 100% 65%), transparent);
+}
+.glow-card::after {
+  background-image: radial-gradient(calc(var(--spotlight-size) * .5) circle at var(--glow-x) var(--glow-y), #fff, transparent);
+}
+.glow-card__halo { position: absolute; inset: 0; border-radius: inherit; filter: blur(12px); opacity: .65; pointer-events: none; }
+.glow-card__halo::before { inset: -8px; border-width: 8px; }
+
+@media (prefers-reduced-motion: reduce), (hover: none), (pointer: coarse) {
+  .glow-card { --glow-opacity: 0 !important; }
+}

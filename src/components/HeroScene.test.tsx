@@ -1,5 +1,6 @@
 import { cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { MemoryRouter } from 'react-router'
 import { HeroScene } from './HeroScene'
 import { createAvatarScene } from '../lib/avatar-scene'
 
@@ -19,6 +20,8 @@ function successfulScene(host: HTMLElement, _url: string, options: Parameters<ty
   return { setEnabled: enabled, setVisible: visible, dispose: () => { dispose(); canvas.remove() } }
 }
 
+function renderHero() { return render(<MemoryRouter><HeroScene /></MemoryRouter>) }
+
 beforeEach(() => {
   preference.reduced = false
   vi.clearAllMocks()
@@ -27,10 +30,17 @@ beforeEach(() => {
 afterEach(cleanup)
 
 describe('personal 3D hero', () => {
+  it('points the About portrait at the shared contact footer', () => {
+    render(<MemoryRouter><HeroScene context="about" /></MemoryRouter>)
+    expect(screen.getByRole('link', { name: 'Contact Jascon Kembuan' })).toHaveAttribute('href', '#contact')
+    expect(screen.queryByRole('link', { name: 'More about Jascon Kembuan' })).not.toBeInTheDocument()
+  })
+
   it('pauses and resumes movement without hiding or reloading the portrait, and cleans up on unmount', async () => {
-    const view = render(<HeroScene />)
+    const view = renderHero()
     const pause = await screen.findByRole('button', { name: 'Pause avatar movement' })
     await waitFor(() => expect(pause).toBeEnabled())
+    expect(screen.getByRole('link', { name: 'More about Jascon Kembuan' })).toHaveAttribute('href', '/about')
     const canvas = view.container.querySelector('canvas')
     fireEvent.click(pause)
     expect(screen.getByRole('button', { name: 'Enable avatar movement' })).toHaveAttribute('aria-pressed', 'false')
@@ -45,7 +55,7 @@ describe('personal 3D hero', () => {
 
   it('loads a still portrait for reduced-motion users until they explicitly enable movement', async () => {
     preference.reduced = true
-    render(<HeroScene />)
+    renderHero()
     const play = await screen.findByRole('button', { name: 'Enable avatar movement' })
     await waitFor(() => expect(play).toBeEnabled())
     expect(create.mock.calls[0][2].enabled).toBe(false)
@@ -58,7 +68,7 @@ describe('personal 3D hero', () => {
       options.onFailure()
       return { setEnabled: enabled, setVisible: visible, dispose }
     })
-    const view = render(<HeroScene />)
+    const view = renderHero()
     const retry = await screen.findByRole('button', { name: 'Try again' })
     expect(screen.getByRole('status')).toHaveTextContent("The avatar couldn't load.")
     fireEvent.click(retry)

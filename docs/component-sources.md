@@ -34,9 +34,17 @@ The wallpapers are the five exact Wallhaven selections supplied by the user: [q6
 
 The user supplied `C:/Users/jacso/Downloads/avatar.glb` to replace the hero sculpture and requested mouse-following head or body movement. The asset is copied unchanged into `public/models/avatar.glb`. The viewer and rig interaction are original local implementations in `AvatarScene.tsx`, `avatar-scene.ts`, and `avatar-motion.ts`; they do not consume 21st quota or use an external avatar service.
 
+The subsequent portrait-card redesign is also locally authored in `HeroScene.tsx` and `AvatarScene.css`. It adds a glass frame, arched backdrop, soft lighting, an identity panel, and a real About link, with the existing motion control moved to the header. It does not import an additional template or modify the user's model. The previous card component and styles are preserved in the ignored `backups/hero-card-before-redesign` directory.
+
 [Three.js GLTFLoader](https://threejs.org/docs/pages/GLTFLoader.html) and its bundled Meshopt decoder load the embedded mesh and textures. The implementation preserves the rig's rest pose, converts screen rotations into bone-local axes, eases cursor movement, and supports pause, retry, reduced motion, visibility suspension, and resource disposal. The source GLB's generator metadata is `gltfpack 1.2`; no claim of model authorship is inferred from that metadata.
 
 Keep upstream notices when modifying or redistributing imported components. Dependency licenses remain in their respective packages.
+
+## User-supplied GlowCard
+
+The user supplied the `spotlight-card.tsx` / `GlowCard` integration prompt as a text attachment on 7 October 2026 and requested it for Home's **What I Bring** section. The attachment does not identify an author or license; none is inferred. The original prompt is preserved in the ignored `backups/glow-card-prompt/Pasted text.txt` recovery copy. No additional 21st MCP retrieval or generation was used.
+
+`src/components/ui/spotlight-card.tsx` retains the supplied color map, size/custom-size API, mouse-driven hue, colored and white border gradients, and blurred outer glow. Its styles live in a scoped CSS file instead of repeated global injected styles. Adaptations add a semantic article, typed custom properties, card-relative pointer coordinates, animation-frame batching, scroll alignment, live reduced-motion/fine-pointer preferences, cleanup, and native touch scrolling. The three cards use the portfolio's existing Web, AI, and Security copy and Lucide icons; the empty full-screen demo and stock-image instruction do not apply to this content. The original local `SpotlightCard` export remains available for About.
 
 ## User-supplied toolkit sphere
 
@@ -53,3 +61,9 @@ The `CinematicFooter` / `motion-footer.tsx` prompt was supplied by the user on 7
 `src/components/ui/motion-footer.tsx` adapts the curtain reveal, diagonal marquee, aurora, giant background lettering, GSAP entrances, and magnetic glass buttons to Jascon's existing public email and LinkedIn profile. Sample app-store links, placeholder policies, and upstream example branding are replaced with contact actions, a visible email address, clipboard feedback, and a back-to-top link. Styling uses the existing locally bundled Manrope font and portfolio theme in `src/MotionFooter.css`.
 
 The adaptation adds keyboard-triggered curtain visibility, bounded mouse movement, reduced-motion support, normal document flow for short windows, route/layout refreshes, and cleanup for observers, listeners, timers, and GSAP animations. Ambient animations suspend while the footer is off screen or the document is hidden.
+
+## About, Work, and shared wallpaper — 7 October 2026
+
+The single-section About composition and landscape Work cards are original layouts built with the existing React, Router, Lucide, CSS, and personal GLB components. They reuse Home's glass and lavender styling, the verified portfolio data, and the previously authorized public website logos and screenshots. No additional 21st template retrieval, prompt generation, image generation, or dependency was used.
+
+The wallpaper provider and backdrop now live on every route in the persistent site shell. The Home filmstrip controls the shared selection, including direct visits and reloads of About, Work, case studies, and missing pages. The existing storage key and local media remain compatible. Prior About/Work components are preserved in the ignored `backups/about-work-before-redesign` directory.

@@ -7,7 +7,7 @@ import { HeroScene } from '../components/HeroScene'
 import { PageTransition } from '../components/PageTransition'
 import { WorkGallery } from '../components/WorkGallery'
 import { ToolkitSphere } from '../components/ToolkitSphere'
-import { SpotlightCard } from '../components/ui/spotlight-card'
+import { GlowCard } from '../components/ui/spotlight-card'
 import { TextRewind } from '../components/ui/text-rewind'
 import { motion, useInView, useReducedMotion } from 'motion/react'
 import { HeroCarousel } from '../components/ui/hero-carousel'
@@ -15,10 +15,10 @@ import { useHomeBackground } from '../hooks/useHomeBackground'
 import { homeWallpapers } from '../data/home-wallpapers'
 
 const practice = [
-  { icon: Code2, index: '01', title: 'Web that works.', category: 'WEB PRODUCTS', copy: 'Thoughtful interfaces, useful integrations, and the details that get a website from local build to live.', tags: ['React', 'TypeScript', 'Full delivery'], className: 'practice-card--web' },
-  { icon: BrainCircuit, index: '02', title: 'Ideas with intelligence.', category: 'AI & RETRIEVAL', copy: 'Language models connected to the right information. Bringing conversational experiences into real systems.', tags: ['LLM integration', 'RAG', 'Python'], className: 'practice-card--ai' },
-  { icon: ShieldCheck, index: '03', title: 'A security perspective.', category: 'SECURITY THINKING', copy: 'Learning to build with care through internal tooling, risk analysis, and security-awareness work.', tags: ['Security operations', 'Risk analysis'], className: 'practice-card--security' },
-]
+  { icon: Code2, index: '01', title: 'Web that works.', category: 'WEB PRODUCTS', copy: 'Thoughtful interfaces, useful integrations, and the details that get a website from local build to live.', tags: ['React', 'TypeScript', 'Full delivery'], className: 'practice-card--web', glowColor: 'blue' },
+  { icon: BrainCircuit, index: '02', title: 'Ideas with intelligence.', category: 'AI & RETRIEVAL', copy: 'Language models connected to the right information. Bringing conversational experiences into real systems.', tags: ['LLM integration', 'RAG', 'Python'], className: 'practice-card--ai', glowColor: 'purple' },
+  { icon: ShieldCheck, index: '03', title: 'A security perspective.', category: 'SECURITY THINKING', copy: 'Learning to build with care through internal tooling, risk analysis, and security-awareness work.', tags: ['Security operations', 'Risk analysis'], className: 'practice-card--security', glowColor: 'green' },
+] as const
 
 function HeroWord() {
   const ref = useRef<HTMLSpanElement>(null)
@@ -48,8 +48,8 @@ export function HomePage() {
         </section>
 
         <section id="home-atmosphere" className="home-scene-picker page-width" aria-label="Choose your atmosphere">
-          <div className="home-scene-picker__intro"><p className="eyebrow">A CHANGE OF SCENE</p><p>Same curious mind.<br /><strong>A different atmosphere.</strong></p><span>Pick a frame to make it yours.</span></div>
-          <HeroCarousel items={homeWallpapers} index={background.index} onIndexChange={background.select} compact showBackground={false} label="Choose the Home background" brand="SET THE SCENE" className="home-scene-picker__carousel" />
+          <div className="home-scene-picker__intro"><p className="eyebrow">A CHANGE OF SCENE</p><p>Same curious mind.<br /><strong>A different atmosphere.</strong></p><span>Your choice follows you on every page.</span></div>
+          <HeroCarousel items={homeWallpapers} index={background.index} onIndexChange={background.select} compact showBackground={false} label="Choose the website background" brand="SET THE SCENE" className="home-scene-picker__carousel" />
         </section>
 
         <div className="practice-strip" aria-label="Areas of practice"><div className="page-width"><span>WEB DEVELOPMENT</span><Plus size={17} aria-hidden="true" /><span>AI INTEGRATION</span><Plus size={17} aria-hidden="true" /><span>SECURITY THINKING</span><Plus size={17} aria-hidden="true" /><span>FROM IDEA TO DELIVERY</span></div></div>
@@ -61,7 +61,7 @@ export function HomePage() {
 
         <section className="practice-section page-width section-space" aria-labelledby="practice-title">
           <div className="editorial-heading"><div><p className="eyebrow">02 / WHAT I BRING</p><h2 id="practice-title">Different disciplines.<br /><span className="muted-heading">One curious mind.</span></h2></div><p className="editorial-heading__aside">I like the space between a good interface, a useful system, and the practical decisions that make it work.</p></div>
-          <div className="practice-grid">{practice.map(item => <SpotlightCard key={item.index} className={`practice-card ${item.className}`}><div className="practice-card__top"><item.icon size={26} strokeWidth={1.5} aria-hidden="true" /><span>{item.index}</span></div><span className="practice-card__category">{item.category}</span><h3>{item.title}</h3><p>{item.copy}</p><div className="practice-card__tags">{item.tags.map(tag => <span key={tag}>{tag}</span>)}</div></SpotlightCard>)}</div>
+          <div className="practice-grid">{practice.map(item => <GlowCard key={item.index} customSize glowColor={item.glowColor} className={`practice-card ${item.className}`}><div className="practice-card__top"><item.icon size={26} strokeWidth={1.5} aria-hidden="true" /><span>{item.index}</span></div><span className="practice-card__category">{item.category}</span><h3>{item.title}</h3><p>{item.copy}</p><div className="practice-card__tags">{item.tags.map(tag => <span key={tag}>{tag}</span>)}</div></GlowCard>)}</div>
         </section>
 
         <section className="about-preview page-width section-space" aria-labelledby="about-preview-title">

@@ -1,7 +1,7 @@
 /* CinematicFooter from the supplied prompt, adapted to the portfolio's local theme. */
 .cinematic-footer-reveal { position: relative; height: 100svh; margin-top: 70px; clip-path: inset(0); isolation: isolate; scroll-margin-top: 0; }
 .cinematic-footer { --footer-accent: var(--blue); --footer-secondary: #aa94cb; position: fixed; inset: auto 0 0; display: flex; flex-direction: column; width: 100%; height: 100svh; min-height: 720px; overflow: hidden; background: var(--bg); color: var(--text); border-top: 1px solid var(--line); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
-.site-shell--home .cinematic-footer { --footer-accent: #bacbff; --footer-secondary: #9e82c4; }
+.site-shell--studio .cinematic-footer { --footer-accent: #bacbff; --footer-secondary: #9e82c4; }
 .cinematic-footer :focus-visible { outline: 2px solid var(--footer-accent); outline-offset: 5px; }
 .footer-bg-grid { position: absolute; inset: 0; pointer-events: none; background-size: 60px 60px; background-image: linear-gradient(to right, color-mix(in srgb, var(--text) 4%, transparent) 1px, transparent 1px), linear-gradient(to bottom, color-mix(in srgb, var(--text) 4%, transparent) 1px, transparent 1px); mask-image: linear-gradient(transparent, #000 25%, #000 75%, transparent); }
 .footer-aurora { position: absolute; width: 90vw; height: 65vh; top: 48%; left: 50%; pointer-events: none; border-radius: 50%; background: radial-gradient(ellipse at 30% 45%, color-mix(in srgb, var(--blue) 23%, transparent), transparent 55%), radial-gradient(ellipse at 70% 55%, color-mix(in srgb, var(--footer-secondary) 20%, transparent), transparent 55%); filter: blur(65px); animation: footer-breathe 8s ease-in-out infinite alternate; animation-play-state: paused; }

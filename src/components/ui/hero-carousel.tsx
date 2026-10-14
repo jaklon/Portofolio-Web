@@ -252,7 +252,7 @@ export function HeroCarousel({
       {showBackground && <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/65" />}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-[0.22] mix-blend-overlay"
+        className="pointer-events-none absolute inset-0 opacity-[0.22] mix-blend-overlay hero-carousel__grain"
         style={{ backgroundImage: GRAIN, backgroundSize: "180px 180px" }}
       />
 

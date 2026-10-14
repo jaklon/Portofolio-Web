@@ -8,6 +8,7 @@ import { NotFoundPage } from './pages/NotFoundPage'
 import { ProjectDetailPage } from './pages/ProjectDetailPage'
 import { ProjectsPage } from './pages/ProjectsPage'
 import './App.css'
+import './StudioPages.css'
 
 function ScrollToTop() {
   const { pathname } = useLocation()

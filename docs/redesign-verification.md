@@ -69,3 +69,55 @@ Browser checks covered Home at 1440 × 1000, 390 × 844, and 320 × 568. The tal
 All 29 tests in 11 files pass, including four new checks for verified contact destinations, successful copying and confirmation reset, clipboard-denied fallback, and keyboard-triggered curtain visibility. The production build and TypeScript checks pass. The existing Vite chunk-size warning remains; no new performance benchmark was run.
 
 Lint could not complete on this date because Windows Application Control blocked the installed Oxlint native binding (`@oxlint/binding-win32-x64-msvc`). Running outside the sandbox encountered the same operating-system policy. The policy and dependencies were left unchanged; this is a tooling limitation, not a passing lint result.
+
+## Rumahweb deployment package — 7 October 2026
+
+Prepared `deployment/jascon.my.id-2026-10-07.zip` for the root of the user's dedicated `jascon.my.id` document root. The ZIP contains 84 website files directly at its root, including `.htaccess`, the original GLB, all local media, `robots.txt`, and ten sitemap URLs. It is approximately 9.69 MB compressed and 10.77 MB unpacked. Source, dependencies, credentials, and backup folders are not included.
+
+The packager verified every ZIP member against the production build/generated contents, checked archive integrity, and validated the local JS/CSS entry references. A SHA-256 checksum and per-file manifest accompany the archive. The production build and all 29 tests pass; the existing bundle-size warning remains. Apache rules explicitly handle `/projects` before the existing media directory, preserve media responses, and leave missing static assets as 404.
+
+No hosting account, DNS, domain document root, or other hosted website was changed. Apache/Docker was unavailable for a local server check, so the rewrite/header behavior and SSL must be verified on Rumahweb after upload. Installation and recovery steps are documented in `docs/deployment-rumahweb.md`, with a copy beside the ZIP.
+
+## What I Bring glow cards — 7 October 2026
+
+Replaced Home's practice-card wrapper with the user-supplied GlowCard design. The Web, AI, and Security content remains grounded in the portfolio, with translucent blue, purple, and green surfaces, matching icons, colored/white pointer-driven edges, and a soft halo. CSS is scoped; no new runtime dependency is required. About retains its original SpotlightCard.
+
+Browser checks covered a 1280 × 720 desktop, a 750 × 855 default window, and 390 × 844 / 320 × 568 phone layouts. Actual pointer input produced the expected moving border gradients on the hovered and adjacent cards. Phone layouts stack the cards; text and tags fit inside their content areas, the page has no horizontal overflow, and vertical scrolling over the cards remains available. Fuji and Alpine wallpaper selections retained readable copy. The tested selection was restored afterward. Desktop and phone proof are saved in `docs/previews/what-i-bring-glow.jpg` and `docs/previews/what-i-bring-glow-mobile.jpg`.
+
+All 31 tests in 12 files pass. Two added interaction checks cover batched pointer updates, scroll alignment, cancellation and listener cleanup, touch input, and live motion-preference changes. TypeScript, lint, and the production build pass on this run; the earlier lint-tool limitation did not recur. The existing Vite bundle-size warning remains. The Rumahweb ZIP is refreshed from this production build and checked by the existing packager.
+
+## Scene picker transparency — 7 October 2026
+
+The user requested a more transparent background for the **Set the Scene** panel. Its dark fill is reduced from approximately 73% to 20%, backdrop blur from 18 px to 6 px, and decorative grain from 22% to 6%. A subtle text shadow preserves readable titles and controls. The change is scoped to the Home scene picker.
+
+The local browser confirmed the 20% background, 6 px blur, and 6% grain, with the wallpaper visible through the panel. Proof is saved in `docs/previews/home-scene-picker-transparent.jpg`. The production build and TypeScript checks pass; the Rumahweb deployment ZIP is refreshed and verified. No additional tests were added for this visual-only adjustment.
+
+## Personal portrait card redesign — 7 October 2026
+
+The user's hero-avatar screenshot is replaced with a lighter glass portrait card: arched backdrop, soft lavender light, a subtle floor ellipse, a two-line Jascon Kembuan identity panel, and a real arrow link to About. The existing pause/resume control moves to the header. The original GLB, camera configuration, rig motion, lazy loading, retry, resource cleanup, and reduced-motion behavior remain in place.
+
+Browser checks covered the 750 × 855 default window, 1280 × 800 desktop, and 390 × 844 / 320 × 568 phone layouts. Actual pointer input changed the avatar's horizontal look from -0.389 to 0.317. Pause/resume updates its state and feedback correctly; the profile arrow opened `/about`, and returning Home reloaded the portrait. On the smallest layout, the header and identity content fit their containers without horizontal page overflow. Temporary viewport overrides were reset afterward.
+
+All 31 existing tests in 12 files pass, including the updated hero tests using the router and checking the new profile destination. Lint and the production build (including TypeScript) pass. The existing Vite chunk-size warning remains. Proof is saved in `docs/previews/hero-portrait-redesign-desktop.jpg` and `docs/previews/hero-portrait-redesign-mobile.jpg`. The Rumahweb deployment ZIP is refreshed and checked with the existing packager.
+
+## About, Work, and shared wallpaper — 7 October 2026
+
+About now has exactly one section within its main content: introduction, personal GLB portrait, current CISO internship, Informatics Engineering education, verified LLM security credential, and data-derived project/tool counts. Its actions lead to Work and contact. The About portrait's arrow points to contact instead of linking back to the same page. The former multi-section biography is preserved in the ignored recovery directory.
+
+Work follows Home's dark translucent glass styling with lavender accents. Landscape cards show the four original website logos and homepage screenshots, readable descriptions, technology tags, and case-study links. The remaining three projects retain labeled concept illustrations. All four logos and all seven preview images loaded in the browser. Academic and Freelance filters returned two and four matching projects, respectively; Internship led to the existing confidential public overview.
+
+One persistent backdrop now serves every route. Actual Home controls selected City after the rain; About, Work, Circular Waste details, and CISO details displayed the same wallpaper. Reloading the Circular Waste case study retained that selection. The CISO notice uses light text over a dark glass surface. Fuji at dusk was restored after testing. Home's picker now explains that the selection follows the visitor across pages; shared header/footer colors match the Home theme.
+
+Browser checks covered 1280 px desktop views, the default app window, and 390 × 844 / 320 × 568 phone layouts. About retained one section, the mobile menu closed on navigation, filters wrapped on the smallest screen, profile fact cells fit their content, and no horizontal page overflow appeared. Temporary viewport overrides were reset. Desktop proofs are `docs/previews/about-studio-desktop.jpg` and `docs/previews/work-studio-desktop.jpg`; phone proof is `docs/previews/work-studio-mobile.jpg`.
+
+All 35 tests in 14 files pass, including new cross-route wallpaper persistence, direct visits to inner/missing pages, the single-section profile, and its contact destination. Lint, TypeScript, and the production build pass. The existing Vite bundle-size warning remains. The verified Rumahweb ZIP is refreshed: 84 files, approximately 9.69 MB compressed / 10.78 MB unpacked, SHA-256 `9849b4b253a7e87c96052e9feecef08799da04fd7fd7d64d2f469b86b3a0448e`. No hosting upload was performed.
+
+## Live domain check and archive permission correction — 7 October 2026
+
+After the user extracted the package in cPanel, the live browser showed `https://jascon.my.id/` returning **403 Forbidden** from LiteSpeed. Independent HTTPS checks also returned 403 for `index.html`, About, robots, sitemap, and both known bundled entry assets. `/projects` redirected to a directory listing rather than the React catalogue. The live portfolio is therefore not yet usable; cPanel permissions, document root, and rewrite handling still require checking.
+
+The archive audit found all 84 original entries stored with mode `0600`, inherited from Python's `writestr` defaults. That metadata can make public files unreadable to a hosting web server; server-side extraction permissions have not been inspected, so it is a likely cause rather than a confirmed diagnosis of the cPanel configuration. The earlier packager verified content but missed hosting permission metadata.
+
+The packager now explicitly writes Unix regular files with `0644` and ten directory entries with `0755`. Validation checks every member's type, platform, and permissions as well as its contents, entry references, sitemap, and CRC integrity. A separate archive audit passes. The prior ZIP/manifest/checksum are preserved in `backups/deployment-before-permission-fix`. The corrected package's SHA-256 is `022eba53e5be0d342e6169b48ee60b17ab1e6c0b31de9bdf0e75f7f49a99025f`.
+
+The deployment guide now includes permission checks and 403 troubleshooting scoped to the dedicated portfolio document root. No application source or server configuration was changed during this check. The corrected ZIP has not been uploaded, and restoration of the live site is not claimed.

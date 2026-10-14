@@ -32,6 +32,7 @@ export interface Project {
   deliveryContext: string
   media: ProjectMedia[]
   cover?: ProjectMedia
+  logo?: string
   externalUrl?: string
   repoUrl?: string
   confidential?: boolean

@@ -1,5 +1,5 @@
-import { useRef, useState } from 'react'
-import { ArrowUpRight, Menu, X } from 'lucide-react'
+import { useEffect, useRef, useState } from 'react'
+import { ArrowUpRight, Heart, Menu, X } from 'lucide-react'
 import { NavLink, useLocation } from 'react-router'
 import type { PropsWithChildren } from 'react'
 import { contacts } from '../data/portfolio'
@@ -9,24 +9,65 @@ import '../HomeBackground.css'
 
 export function SiteShell({ children }: PropsWithChildren) {
   const location = useLocation()
-  const isHome = location.pathname === '/'
   const [menuPath, setMenuPath] = useState<string | null>(null)
   const menuOpen = menuPath === location.pathname
   const menuButton = useRef<HTMLButtonElement>(null)
+  const brandLink = useRef<HTMLAnchorElement>(null)
+  const storyLink = useRef<HTMLAnchorElement>(null)
+  const holdTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const heldBrand = useRef(false)
+  const [storyOpen, setStoryOpen] = useState(false)
+  const [storyRoute, setStoryRoute] = useState(location.pathname)
+
+  if (storyRoute !== location.pathname) {
+    setStoryRoute(location.pathname)
+    setStoryOpen(false)
+  }
 
   const closeMenu = () => setMenuPath(null)
+  const cancelHold = () => {
+    if (holdTimer.current !== null) clearTimeout(holdTimer.current)
+    holdTimer.current = null
+  }
+  const startHold = (button: number) => {
+    if (button !== 0) return
+    cancelHold()
+    heldBrand.current = false
+    holdTimer.current = setTimeout(() => {
+      heldBrand.current = true
+      setStoryOpen(true)
+    }, 2000)
+  }
+  const closeStory = () => { setStoryOpen(false); brandLink.current?.focus() }
+
+  useEffect(() => {
+    const handleShortcut = (event: KeyboardEvent) => {
+      if (event.ctrlKey && event.altKey && event.code === 'KeyJ' && !event.repeat) {
+        event.preventDefault()
+        setStoryOpen(true)
+      }
+    }
+    window.addEventListener('keydown', handleShortcut)
+    return () => {
+      window.removeEventListener('keydown', handleShortcut)
+      if (holdTimer.current !== null) clearTimeout(holdTimer.current)
+    }
+  }, [location.pathname])
+
+  useEffect(() => { if (storyOpen) storyLink.current?.focus() }, [storyOpen])
 
   return (
-    <HomeBackgroundProvider><div className={`site-shell ${isHome ? 'site-shell--home' : ''}`}>
-      {isHome && <HomeBackground />}
+    <HomeBackgroundProvider><div className="site-shell site-shell--studio">
+      <HomeBackground />
       <a className="skip-link" href="#main-content">Skip to content</a>
-      <header className="site-header" onKeyDown={event => { if (event.key === 'Escape') { closeMenu(); menuButton.current?.focus() } }}>
+      <header className="site-header" onKeyDown={event => { if (event.key === 'Escape') { if (storyOpen) closeStory(); else { closeMenu(); menuButton.current?.focus() } } }}>
         <div className="site-header__inner page-width">
-          <NavLink className="brand-mark" to="/" aria-label="Jascon Kembuan home" onClick={closeMenu}><span className="brand-symbol" aria-hidden="true">j.</span><span>Jascon<br /><strong>Kembuan</strong></span></NavLink>
+          <NavLink ref={brandLink} className="brand-mark" to="/" aria-label="Jascon Kembuan home" onPointerDown={event => startHold(event.button)} onPointerUp={cancelHold} onPointerCancel={cancelHold} onPointerLeave={cancelHold} onContextMenu={event => event.preventDefault()} onClick={event => { if (heldBrand.current) { event.preventDefault(); heldBrand.current = false } else { closeMenu(); setStoryOpen(false) } }}><span className="brand-symbol" aria-hidden="true">j.</span><span>Jascon<br /><strong>Kembuan</strong></span></NavLink>
           <nav className="site-nav" aria-label="Primary navigation"><NavLink to="/" end>Home</NavLink><NavLink to="/about">About</NavLink><NavLink to="/projects">Work</NavLink></nav>
           <a className="button button--glass header-contact" href="#contact">Let's talk <ArrowUpRight size={16} aria-hidden="true" /></a>
           <button ref={menuButton} className="menu-toggle" type="button" aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen} aria-controls="mobile-navigation" onClick={() => setMenuPath(menuOpen ? null : location.pathname)}>{menuOpen ? <X size={23} aria-hidden="true" /> : <Menu size={23} aria-hidden="true" />}</button>
         </div>
+        {storyOpen && <div className="private-story-entry" role="group" aria-label="Private story"><a ref={storyLink} className="button button--glass" href="/jv-story/"><Heart size={16} aria-hidden="true" />JV Story <ArrowUpRight size={16} aria-hidden="true" /></a><button className="private-story-close" type="button" aria-label="Close private story" onClick={closeStory}><X size={18} aria-hidden="true" /></button></div>}
         {menuOpen && <nav id="mobile-navigation" className="mobile-navigation" aria-label="Mobile navigation"><NavLink to="/" end onClick={closeMenu}>Home</NavLink><NavLink to="/about" onClick={closeMenu}>About</NavLink><NavLink to="/projects" onClick={closeMenu}>Work</NavLink><a href="#contact" onClick={closeMenu}>Let's talk <ArrowUpRight size={19} aria-hidden="true" /></a></nav>}
       </header>
       {children}
